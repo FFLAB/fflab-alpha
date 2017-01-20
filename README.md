@@ -1,6 +1,6 @@
 # fflab-alpha
-<h1>fflab-alpha WordPress Responsive Theme</h1>
-<h3>Free WordPress Theme for my blog</h3>
+<h3>a WordPress Responsive Theme</h3>
+<h4>Free WordPress Theme for my blog</h4>
 
 From an original work by Salvatore Laisa for Mohole School,
 I added Bootstrap 3 responsive navbar with wp_bootstrap_navwalker.php code for full dropdown features.
