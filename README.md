@@ -7,3 +7,9 @@ I added Bootstrap 3 responsive navbar with wp_bootstrap_navwalker.php code for f
 Several customization for my personal blog http://www.fflab.info.
 
 Free avalaible for students and all kind of human and alien creatures.
+
+- Features:
+Bootstrap 3.x.x
+Fancybox.js animated gallery
+FontAwesome Icons
+
