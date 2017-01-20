@@ -1,0 +1,9 @@
+# fflab-alpha
+<h1>fflab-alpha WordPress Responsive Theme</h1>
+<h3>Free WordPress Theme for my blog</h3>
+
+From an original work by Salvatore Laisa for Mohole School,
+I added Bootstrap 3 responsive navbar with wp_bootstrap_navwalker.php code for full dropdown features.
+Several customization for my personal blog http://www.fflab.info.
+
+Free avalaible for students and all kind of human and alien creatures.
