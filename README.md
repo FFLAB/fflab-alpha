@@ -4,6 +4,7 @@
 
 From an original work by Salvatore Laisa for Mohole School,
 I added Bootstrap 3 responsive navbar with wp_bootstrap_navwalker.php code for full dropdown features.
+Fixed Menu. Navigation posts. 4 custom widgets areas for the footer. 
 Several customization for my personal blog http://www.fflab.info.
 
 Free avalaible for students and all kind of human and alien creatures.
@@ -12,4 +13,3 @@ Free avalaible for students and all kind of human and alien creatures.
 - Bootstrap 3.x.x
 - Fancybox.js animated gallery
 - FontAwesome Icons
-
