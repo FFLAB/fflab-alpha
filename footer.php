@@ -1,7 +1,8 @@
+<!-- Inizio footer (footer.php) -->
 	<div class="bcgfooter">
 		<div id="footer" class="container">
 			<div class="row">
-				<!-- area widget -->
+				<!-- Richiamo un'area widget -->
 				<div class="col-sm-4">
 				    <?php dynamic_sidebar("Footer-sx"); ?>
 				</div>
@@ -19,6 +20,9 @@
 			</div>
 		</div>
 	</div>
+
+
+	<!-- dove WordPress aggiungerà html, script, ecc... -->
 	<?php wp_footer(); ?>
 
 	</body>

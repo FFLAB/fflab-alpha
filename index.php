@@ -3,7 +3,7 @@
 		<main class="container">
 			<div class="row">
 				<div id="contenuti" class="col-md-12">
-					<!--start loop Wordpress -->
+					<!--start loop di Wordpress -->
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 				<div <?php post_class('articolo'); ?>>
@@ -12,11 +12,11 @@
 				<?php the_content() ?>
             <p><small>Scritto da <strong><?php the_author() ?></strong> il <?php the_time('d F Y'); ?></small></p>
 				<?php the_tags(
-                   "<p><small>Tags: ",
-                    ", ",
-                    "</small></p>"
+                   "<p><small>Argomenti: ", //prima dei tags
+                    ", ",   //separatore dei tags
+                    "</small></p>"  //dopo i tags
                     ); ?>
-
+				
 				</div>
 				<?php endwhile; else: ?>
 <!-- alternative text-->
@@ -29,7 +29,29 @@
 <!--    end loop Wordpress -->
 
 				</div>
+				
+				
+				
 			</div>
 		</main>
 
-	<?php get_footer(); ?>
+
+	<?php get_footer(); ?> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

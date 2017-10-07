@@ -1,8 +1,9 @@
 <?php
 function creaWidget(){
-    //Widget areas
+    //Registro un'area per i widget
     register_sidebar(array(
-        "name" => "Barra Laterale",
+        "name" => __( 'Barra Laterale', 'theme-slug' ),
+        "id" => "sidebar-1",
         "description" => "I widget sidebar dx",
         "before_widget" => '<div class="widget">',
         "after_widget" => '</div>',
@@ -11,14 +12,16 @@ function creaWidget(){
         ));
       register_sidebar(array(
         "name" => "Footer-sx",
+        "id" => "sidebar-2",
         "description" => "Footer a sinistra",
         "before_widget" => '<div class="widget">',
         "after_widget" => '</div>',
         "before_title" => '<h4>',
         "after_title" => '</h4>'
-        ));
+        )); 
      register_sidebar(array(
         "name" => "Footer-cx",
+        "id" => "sidebar-3",
         "description" => "Footer al centro",
         "before_widget" => '<div class="widget">',
         "after_widget" => '</div>',
@@ -27,6 +30,7 @@ function creaWidget(){
         ));
      register_sidebar(array(
         "name" => "Footer-dx",
+        "id" => "sidebar-4",
         "description" => "Footer a destra",
         "before_widget" => '<div class="widget">',
         "after_widget" => '</div>',
@@ -35,6 +39,7 @@ function creaWidget(){
         ));
     register_sidebar(array(
         "name" => "Footer-last",
+        "id" => "sidebar-5",
         "description" => "Footer in fondo",
         "before_widget" => '<div class="widget">',
         "after_widget" => '</div>',
@@ -43,6 +48,7 @@ function creaWidget(){
         ));
      register_sidebar(array(
         "name" => "Header-right",
+        "id" => "sidebar-6",
         "description" => "Header a destra",
         "before_widget" => '<div class="widget">',
         "after_widget" => '</div>',
@@ -54,7 +60,7 @@ function creaWidget(){
 function creaMenu(){
 //Registro una nuova navigazione
     register_nav_menu("principale","Mia Navigazione Principale");
-
+    
 }
 
 function immagineEvidenza(){
@@ -63,7 +69,7 @@ function immagineEvidenza(){
 }
 function pagination_nav() {
     global $wp_query;
-
+ 
     if ( $wp_query->max_num_pages > 1 ) { ?>
         <nav class="pagination" role="navigation">
             <div class="nav-previous"><?php next_posts_link( '&larr; Articoli meno recenti' ); ?></div>
@@ -82,17 +88,17 @@ function caricaScripts(){
         '3.3.7',
         'all'
     );
-
+    
     //Dimentica la versione attualmente registrata di Jquery
     wp_deregister_script("jquery");
-
+    
     // Definire la nostra versione
     wp_register_script(
         "jquery",
         get_bloginfo("template_url") . "/js/jquery-3.1.0.min.js",
-        false,
-        "3.1.0",
-        true
+        false, 
+        "3.1.0", 
+        true 
 );
     // Definisco JS e CSS di Fancybox
         wp_register_script(
@@ -100,7 +106,7 @@ function caricaScripts(){
             get_bloginfo("template_url") . "/fancybox/jquery.fancybox.pack.js",
             array("jquery"),
             "2.0.0",
-            true
+            true 
         );
         wp_register_style(
             "fancyCSS",
@@ -118,8 +124,8 @@ function caricaScripts(){
         );
      // Definisco il mio script
         wp_register_script(
-            "myscript",
-            get_bloginfo("template_url") . "/js/myscript.js",
+            "mohole",
+            get_bloginfo("template_url") . "/js/mohole.js",
             array("jquery","fancyJS"),
             "1.0.0",
             true
@@ -133,15 +139,15 @@ function caricaScripts(){
         true
     );
 // Caricamenti scripts (attenzione qui non importa l'ordine, le dipendenze sono indicate negli array() precedenti
-
-    wp_enqueue_script("myscript");
+    
+    wp_enqueue_script("mohole");
     wp_enqueue_script("jquery");
     wp_enqueue_script("fancyJS");
     wp_enqueue_style("bootstrapCSS");
     wp_enqueue_style("fancyCSS");
      wp_enqueue_style("fawesomeCSS");
     wp_enqueue_style('style',get_stylesheet_uri()); //carico style.css da functions.php (nuove linee guida)
-    wp_enqueue_script("bootstrapJS");
+    wp_enqueue_script("bootstrapJS"); 
 }
 
 
