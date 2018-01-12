@@ -1,8 +1,5 @@
-$(document).ready(function() { 
-            
-    // codice di istruzioni per Fancybox*/
-   //ori $('.gallery a').attr('rel','gallAnimata').fancybox();
-	
+$(document).ready(function() {       
+    // Fancybox
 	$("#switch").tooltip();
     $(".gallery-caption span").tooltip();
     
@@ -18,7 +15,5 @@ $(document).ready(function() {
     $(".gallery a").attr("rel", "galleria").fancybox({
         padding: 0,
     });
-    
-    $(".gallery-icon.portrait").removeClass("portrait").addClass("landscape");
-            
-});//chiusura (document).ready
+    $(".gallery-icon.portrait").removeClass("portrait").addClass("landscape");         
+});
