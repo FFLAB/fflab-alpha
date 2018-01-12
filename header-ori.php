@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
-		<title><?php bloginfo('title'); ?></title>
+		<title><?php wp_title(); ?></title>
 		
 		<!-- Metadati -->
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -12,8 +12,7 @@
 	
 		<!-- Favicon -->
 		<link rel="icon" href="<?php bloginfo('template_url'); ?>/img/favicon.ico" type="image/png">
-<!--    <link href="https://fonts.googleapis.com/css?family=Atma:300,400,600" rel="stylesheet">-->
-      <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Atma:300,400,600" rel="stylesheet">
        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,14 +25,14 @@
 	
 	 <!-- Navigation -->
 <header>
+<div class="container">
+    <div class="row">
        
         <!--  Navbar Brand Bootstrap-->
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-           <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 <!--    navbar-brand: logo/testo nome del sito       --><strong><a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo("name"); ?></a></strong> </div>
-           
             <!-- Navigazione Dinamica -->
             <?php
         wp_nav_menu(array(
@@ -42,14 +41,15 @@
             'container' => 'div',
             'container_class' => 'collapse navbar-collapse',
             'container_id' => 'bs-example-navbar-collapse-1',
-            'menu_class' => 'nav navbar-nav navbar-right',
+            'menu_class' => 'nav navbar-nav',
             'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
             'walker' => new wp_bootstrap_navwalker()
         ));
         ?>
-        </div>
+        
         </nav>
-         
-    
+             
+    </div>
+</div>
 </header>
 	<!-- Fine intestazione (header.php) -->

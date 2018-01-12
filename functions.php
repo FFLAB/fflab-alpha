@@ -149,7 +149,14 @@ function caricaScripts(){
     wp_enqueue_style('style',get_stylesheet_uri()); //carico style.css da functions.php (nuove linee guida)
     wp_enqueue_script("bootstrapJS"); 
 }
-
+//per didascalia in fancybox
+function add_title_attachment_link($link, $id = null) {
+    $id = intval( $id );
+    $_post = get_post( $id );
+    $post_title = esc_attr( $_post->post_excerpt );
+    return str_replace('<a href', '<a title="'. $post_title .'" href', $link);
+}
+add_filter('wp_get_attachment_link', 'add_title_attachment_link', 10, 2);
 
 
 //Azioni
