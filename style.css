@@ -3,11 +3,11 @@ Theme Name: FFLab-Alpha
 Theme URI: http://www.fflab.info/blog
 Author: FFLab
 Author URI: http://www.fflab.info/blog
-Description: Theme with Bootstrap 3 customized by FFLab
-Version: 2.1
+Description: Theme with Bootstrap 4 beta customized by FFLab
+Version: 3.0
 License: GNU GPL v2 or later (open source)
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: columns, bootstrap, responsive, walkerphp
+Tags: columns, bootstrap4, responsive, walkerphp
 */
 /* Generali/Tipografia */
 body{
@@ -26,9 +26,16 @@ a,a:hover{
 }
 
 /* Layout */
-header{ border-bottom: 1px solid #a00e05;
-margin-bottom: 60px;}
+header{
+    padding: 0 20px;
+    border-bottom: 1px solid #a00e05;
+    margin-bottom: 100px;
+    background-color: #a00e05;}
 
+header h2{margin-left:50px;}
+.navbar-nav{margin-right: 50px;}
+
+.bghead{background-color: #a00e05;}
 
 #intestazione{
 	line-height: 70px;
@@ -120,9 +127,16 @@ margin-bottom: 60px;}
 ul.nav li.dropdown:hover ul.dropdown-menu {
     display: block;   
 }
+/*
 .navbar-toggle .icon-bar {
     background-color: #a00e05;
     color: #a00e05;
+  border-color: #a00e05;
+}
+*/
+.navbar-toggler-icon {
+    background-color: #a00e05;
+    color: white;
   border-color: #a00e05;
 }
 .navbar a {
@@ -130,6 +144,9 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 }
 .navbar-nav a{
     font-size:20px;
+}
+.navbar-nav li{
+    margin-left: 2.1rem;
 }
 .dropdown-menu .current-menu-item a{
    background-color: transparent;
@@ -158,29 +175,30 @@ main p{
 	line-height: 42px;
 	font-weight: 300;
 }
-.navbar-default{padding: 10px 0px;}
-.navbar-default, .navbar-brand a{
+/*bs4*/
+.navbar-light{padding: 10px 0px;}
+.navbar-light, .navbar-brand a{
     background-color: #a00e05;
     color: #fff;
 }
-.navbar-default .navbar-nav > li > a{ color: #fff;}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+.navbar-light .navbar-nav > li > a{ color: #fff;}
+.navbar-light .navbar-nav > li > a:hover, .navbar-light .navbar-nav > li > a:focus
 {
     background-color: #a00e05;
     color: #FFF;
 }
-.navbar-default .navbar-brand,
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus {
      color: white;
 }
-.navbar-default .navbar-nav > .active{
+.navbar-light .navbar-nav > .active{
     color: #FFF;
    background: #a00e05;
  }
- .navbar-default .navbar-nav > .active > a, 
- .navbar-default .navbar-nav > .active > a:hover, 
- .navbar-default .navbar-nav > .active > a:focus {
+ .navbar-light .navbar-nav > .active > a, 
+ .navbar-light .navbar-nav > .active > a:hover, 
+ .navbar-light .navbar-nav > .active > a:focus {
       color: #FFF;
       background: #a00e05;
  }

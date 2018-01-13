@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-	<head>
+<head>
 		<title><?php bloginfo('title'); ?></title>
 		
 		<!-- Metadati -->
@@ -21,35 +21,39 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php wp_head(); ?>
-	</head>
-	<body <?php body_class(); ?>> 
+</head>
+<body <?php body_class(); ?>> 
 	
 	 <!-- Navigation -->
-<header>
-       
-        <!--  Navbar Brand Bootstrap-->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-           <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <!--    navbar-brand: logo/testo nome del sito       --><strong><a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo("name"); ?></a></strong> </div>
-           
-            <!-- Navigazione Dinamica -->
-            <?php
-        wp_nav_menu(array(
-            'theme_location' => 'principale',
-            'depth' => 2,
-            'container' => 'div',
-            'container_class' => 'collapse navbar-collapse',
-            'container_id' => 'bs-example-navbar-collapse-1',
-            'menu_class' => 'nav navbar-nav navbar-right',
-            'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
-            'walker' => new wp_bootstrap_navwalker()
-        ));
-        ?>
-        </div>
-        </nav>
-         
-    
-</header>
+<div class="bghead">
+    <header class="container">
+           <!--  Navbar Brand Bootstrap-->
+            <!--Bs 4 -->
+                <nav class="navbar fixed-top navbar-expand-md navbar-light">
+          <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+           <h2><?php bloginfo("name"); ?></h2>
+            </a>
+            <span><small><?php bloginfo('description'); ?></small></span>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+                <!-- WP Navigation -->
+            <?php 
+                wp_nav_menu(array(
+                'theme_location' => 'principale',
+                'depth' => 2,
+                'container' => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id' => 'navbarsExample03',
+                'menu_id' => false,
+                'menu_class' => 'navbar-nav ml-auto',
+                'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+                'walker' => new wp_bootstrap_navwalker()
+                ));
+                ?>
+            </nav>  
+    </header>   
+</div>
 	<!-- Fine intestazione (header.php) -->
