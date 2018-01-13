@@ -33,7 +33,7 @@
           <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
            <h2><?php bloginfo("name"); ?></h2>
             </a>
-            <span><small><?php bloginfo('description'); ?></small></span>
+            <span class="d-none d-lg-block d-xl-block"><small><?php bloginfo('description'); ?></small></span>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
