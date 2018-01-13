@@ -127,17 +127,16 @@ header h2{margin-left:50px;}
 ul.nav li.dropdown:hover ul.dropdown-menu {
     display: block;   
 }
+
 /*
-.navbar-toggle .icon-bar {
-    background-color: #a00e05;
-    color: #a00e05;
-  border-color: #a00e05;
-}
-*/
 .navbar-toggler-icon {
     background-color: #a00e05;
     color: white;
   border-color: #a00e05;
+}
+*/
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 .navbar a {
     font-size: 26px;
