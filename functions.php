@@ -1,8 +1,8 @@
 <?php
 function creaWidget(){
-    //Registro un'area per i widget
+    //Widget Area
     register_sidebar(array(
-        "name" => __( 'Barra Laterale', 'theme-slug' ),
+        "name" => __( 'Barra Laterale', 'ffalpha' ),
         "id" => "sidebar-1",
         "description" => "I widget sidebar dx",
         "before_widget" => '<div class="widget">',
@@ -18,7 +18,7 @@ function creaWidget(){
         "after_widget" => '</div>',
         "before_title" => '<h4>',
         "after_title" => '</h4>'
-        )); 
+        ));
      register_sidebar(array(
         "name" => "Footer-cx",
         "id" => "sidebar-3",
@@ -60,16 +60,17 @@ function creaWidget(){
 function creaMenu(){
 //Registro una nuova navigazione
     register_nav_menu("principale","Mia Navigazione Principale");
-    
+
 }
 
 function immagineEvidenza(){
  //Attivo le immagini in evidenza degli articoli
     add_theme_support('post-thumbnails');
 }
+//Paginazione
 function pagination_nav() {
     global $wp_query;
- 
+
     if ( $wp_query->max_num_pages > 1 ) { ?>
         <nav class="pagination" role="navigation">
             <div class="nav-previous"><?php next_posts_link( '&larr; Articoli meno recenti' ); ?></div>
@@ -83,22 +84,24 @@ function caricaScripts(){
      //Carico CSS di Bootstrap
     wp_register_style(
         'bootstrapCSS',
-        get_template_directory_uri() . '/css/bootstrap.min.css',
+        //get_template_directory_uri() . '/css/bootstrap.min.css',
+        "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         false,
         '4.0.0',
         'all'
     );
-    
+
     //Dimentica la versione attualmente registrata di Jquery
     wp_deregister_script("jquery");
-    
+
     // Definire la nostra versione
     wp_register_script(
         "jquery",
-        get_bloginfo("template_url") . "/js/jquery-3.2.1.min.js",
-        false, 
-        "3.2.1", 
-        true 
+        //get_bloginfo("template_url") . "/js/jquery-3.2.1.min.js",
+        "https://code.jquery.com/jquery-3.2.1.slim.min.js",
+        false,
+        "3.2.1",
+        true
 );
     // Definisco JS e CSS di Fancybox
         wp_register_script(
@@ -106,7 +109,7 @@ function caricaScripts(){
             get_bloginfo("template_url") . "/fancybox/jquery.fancybox.pack.js",
             array("jquery"),
             "2.0.0",
-            true 
+            true
         );
         wp_register_style(
             "fancyCSS",
@@ -115,13 +118,16 @@ function caricaScripts(){
             "2.0.0",
             "all"
         );
-     wp_register_style(
-            "fawesomeCSS",
-            get_bloginfo("template_url") . "/font-awesome/css/font-awesome.min.css",
-            false,
-            "4.6.3",
-            "all"
-        );
+
+        wp_register_style(
+      'fawesomeCSS',
+      'https://use.fontawesome.com/releases/v5.0.6/css/all.css',
+      false,
+      '5.0.6.',
+      'all'
+  );
+
+
      // Definisco il mio script
         wp_register_script(
             "myjs",
@@ -141,13 +147,14 @@ function caricaScripts(){
     //Bootstrap JS Plugins
     wp_register_script(
         "bootstrapJS",
-        get_bloginfo("template_url") . "/js/bootstrap.min.js",
+        //get_bloginfo("template_url") . "/js/bootstrap.min.js",
+        "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
         array("jquery"),
         "4.0.0",
         true
     );
 // Caricamenti scripts (attenzione qui non importa l'ordine, le dipendenze sono indicate negli array() precedenti
-    
+
     wp_enqueue_script("myjs");
     wp_enqueue_script("jquery");
     wp_enqueue_script("fancyJS");
@@ -156,7 +163,7 @@ function caricaScripts(){
      wp_enqueue_style("fawesomeCSS");
     wp_enqueue_style('style',get_stylesheet_uri()); //carico style.css da functions.php (nuove linee guida)
     wp_enqueue_script("popperJS");
-    wp_enqueue_script("bootstrapJS"); 
+    wp_enqueue_script("bootstrapJS");
 }
 //per didascalia in fancybox
 function add_title_attachment_link($link, $id = null) {
