@@ -4,16 +4,17 @@ Theme URI: http://www.fflab.info/blog
 Author: FFLab
 Author URI: http://www.fflab.info/blog
 Description: Theme with Bootstrap 4 beta customized by FFLab
-Version: 3.0
+Version: 3.1
 License: GNU GPL v2 or later (open source)
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: columns, bootstrap4, responsive, walkerphp
 */
 /* Generali/Tipografia */
+
 body{
-	font-size: 19px;
-	line-height: 24px;
-	font-family: 'Atma',Helvetica, Arial, sans-serif;
+	font-size: 21px;
+	line-height: 33px;
+  font-family: 'Titillium Web',Helvetica, sans-serif;
 	font-weight: 300;
 }
 h1{
@@ -22,7 +23,7 @@ h1{
 
 
 a,a:hover{
-	color: #a00e05;
+		color: #a00e05;
 }
 
 /* Layout */
@@ -66,12 +67,12 @@ header h2{margin-left:50px;}
 	padding-bottom: 30px;
 }
 .articolo{
-	padding: 5px 20px; 
+	padding: 5px 20px;
 	background-color: white;
 	margin-bottom: 20px;
 }
 #barra .interno{
-	padding: 5px 20px; 
+	padding: 5px 20px;
 	background-color: white;
 }
 .bcgfooter{
@@ -111,7 +112,7 @@ header h2{margin-left:50px;}
     text-align: center;
     color: white;
     font-size: 13px;
-    text-transform: uppercase;   
+    text-transform: uppercase;
 }
 /*Reset navbar*/
 .navbar {
@@ -125,7 +126,7 @@ header h2{margin-left:50px;}
     border-bottom: 2px solid #333;
 }
 ul.nav li.dropdown:hover ul.dropdown-menu {
-    display: block;   
+    display: block;
 }
 
 /*
@@ -187,16 +188,18 @@ main p{
     color: #FFF;
 }
 .navbar-light .navbar-brand,
+.navbar-brand a,
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus {
+	 background-color: #a00e05;
      color: white;
 }
 .navbar-light .navbar-nav > .active{
     color: #FFF;
    background: #a00e05;
  }
- .navbar-light .navbar-nav > .active > a, 
- .navbar-light .navbar-nav > .active > a:hover, 
+ .navbar-light .navbar-nav > .active > a,
+ .navbar-light .navbar-nav > .active > a:hover,
  .navbar-light .navbar-nav > .active > a:focus {
       color: #FFF;
       background: #a00e05;
@@ -208,15 +211,15 @@ main p{
 .mysocial p,h1,button{
             margin-left: 40px;
         }
-        
+
 .mysocial {margin: 40px;}
 .mysocial span{
             margin-right: 20px;
-            transition: all 0.4s ease;    
+            transition: all 0.4s ease;
         }
-        
-.mysocial span.fa{ font-size: 30px;}
-        
+
+.mysocial span.fab{ font-size: 30px;}
+
 .mysocial span:hover{
             transform: scale(1.5) translateY(-5px);
             opacity: 0.6;
@@ -240,3 +243,59 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .alignleft { float: left; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
+/* from child tests */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.navbar-brand a{
+    font-weight: 600;
+}
+
+/*added for thumbnail title*/
+.bigtitle{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 20px;
+    height: 350px;
+    padding: 100px 20px 100px;
+    text-shadow: 2px 2px 2px #000;
+    font-size: 40px;
+    text-align: center;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    line-height: 60px;
+}
+
+.bigtitle a{
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+}
+.bigtitle a:hover{
+    text-decoration: none;
+    color: #96352f;
+    text-shadow: 2px 2px 2px #fff;
+
+}
+@media (max-width: 768px){
+    .bigtitle{
+       font-size: 30px;
+       line-height: 40px;
+    }
+}
+.has-post-thumbnail img {
+    margin: 0 auto;
+    height: auto;
+}
+
+.wp-caption-text{
+font-size:14px;
+}
+.fancybox-title-float-wrap .child{
+	border-radius: 0px;
+	padding: 3px;
+}
