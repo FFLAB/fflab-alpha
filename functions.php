@@ -110,8 +110,8 @@ wp_register_style(
     null,
     'all'
     );
-
-    wp_register_style('main_css', get_stylesheet_uri(), array("bootstrapCSS"), null, 'all');
+// register style.css
+  wp_register_style('main_css', get_stylesheet_uri(), array("bootstrapCSS"), null, 'all');
 
 
 	//wp_register_style('theme-style', get_stylesheet_uri(), array(), null, 'all');
@@ -120,11 +120,7 @@ wp_register_style(
   wp_enqueue_style("fawesomeCSS");
 	wp_enqueue_style("bootstrapCSS");
   wp_enqueue_style('main_css');
-
-
-
 }
-
 add_action( 'wp_enqueue_scripts', 'load_styles', 11);
 
 // Only on front-end pages, NOT in admin area
