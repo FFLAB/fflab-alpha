@@ -299,3 +299,6 @@ font-size:14px;
 	border-radius: 0px;
 	padding: 3px;
 }
+#gallery-1 img{
+	border: 0;
+}
