@@ -10,13 +10,13 @@
 
 				<h2><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
 				<?php the_content() ?>
-            	<p><small>Scritto da <strong><?php the_author() ?></strong> il <?php the_time('d F Y'); ?></small></p>
+            	<p><small>Scritto da <strong><?php the_author_posts_link(); ?></strong> il <?php the_time('d F Y'); ?></small></p>
 				<?php the_tags(
-                   "<p><small>Argomenti: ", 
-                    ", ",   
-                    "</small></p>"  
+                   "<p><small>Argomenti: ",
+                    ", ",
+                    "</small></p>"
                     ); ?>
-				
+
 				</div>
 				<?php endwhile; else: ?>
 				<!-- alternative text-->
@@ -29,29 +29,11 @@
 				<!--    end loop Wordpress -->
 
 				</div>
-				
-				
-				
+
+
+
 			</div>
 		</main>
 
 
-	<?php get_footer(); ?> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<?php get_footer(); ?>

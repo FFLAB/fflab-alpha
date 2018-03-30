@@ -15,14 +15,14 @@
 				<h3><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h3>
 				<?php the_content() ?>
 <!-- visualizzo il nome dell'autore -->
-            <p><small>Scritto da <strong><?php the_author() ?></strong></small></p>
+            <p><small>Scritto da <strong><?php the_author_posts_link(); ?></strong></small></p>
             <p>Categoria: <?php the_category( ' ' ); ?></p>
 				<?php the_tags(
                    "<p><small>Argomenti: ", //prima dei tags
                     ", ",   //separatore dei tags
                     "</small></p>"  //dopo i tags
                     ); ?>
-				
+
 				</div>
 				<?php endwhile; else: ?>
 <!-- testo visualizzato solo se il loop non trova elementi-->
@@ -34,32 +34,14 @@
 <!--    Fine loop Wordpress -->
 
 				</div>
-				
+
 <!--	Richiama barra laterale sidebar.php-->
             <?php get_sidebar(); ?>
-				
-				
-				
+
+
+
 			</div>
 		</div>
 	</div>
 
-	<?php get_footer(); ?> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<?php get_footer(); ?>
