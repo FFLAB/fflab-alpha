@@ -2,7 +2,7 @@
 <!--  template SINGLE-TEST.PHP -->
 		<main class="container">
 			<div class="row">
-				<div id="contenuti" class="col-md-12">
+				<div class="col-md-12">
 					<!--start loop di Wordpress -->
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
