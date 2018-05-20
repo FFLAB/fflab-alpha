@@ -304,7 +304,7 @@ font-size:14px;
 }
 /*effetto masonry*/
       /* con il CSS3 imito l'effetto del plugin Masonry*/
-     *, *:before, *:after
+     /* *, *:before, *:after
         { box-sizing: border-box !important;}
 
         .contenitore{
@@ -312,14 +312,14 @@ font-size:14px;
             -webkit-column-width: 25em;
             -moz-column-gap: 0.5em;
             -webkit-column-gap: 0.5em;
-        }
+        } */
         .card{
             display: inline-block;
             margin: 0.5em;
             padding: 0;
             width: 98%;
         }
-				@media (min-width: 576px) {
+	@media (min-width: 576px) {
 	    .card-columns {
 	        column-count: 2;
 	    }
