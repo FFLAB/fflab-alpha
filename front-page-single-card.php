@@ -1,23 +1,29 @@
 <?php get_header(); ?>
-<!--   TEMPLATE FRONT-PAGE.PHP v. row -->
-		<main class="container">
-			<div class="row">
-<!--				<div class="col-md-12">-->
-<!--                <div class="row">-->
+<!--   TEMPLATE FRONT-PAGE.PHP card -->
+		<main class="container-fluid">
+				<div class="contenitore">
+<!--
+ <div class="card">
+            <div class="card-header">Titolo</div>
+            <div class="card-body"><img src="foto/IMG_0002-1000.jpg" alt=""></div>
+        </div>
+-->
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-				<div <?php post_class('articolo col-md-4'); ?>>
+				<div <?php post_class('card'); ?>>
+				<div class="card-header">
 				<h2><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
 				<!-- immagine in evidenza -->
                 <a href="<?php the_permalink(); ?> ">
 									<?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
 								</a>
-
+                </div>
+                <div class="card-body">
 				<?php the_excerpt() ?>
     	         <a href="<?php the_permalink(); ?>"><span class="readmore">Continua a leggere &raquo;</span></a>
-                  <hr>
+                  </div>
                 </div>
-<!--				</div>-->
+
 				<?php endwhile; else: ?>
 
                 <div class="articolo">
@@ -27,8 +33,8 @@
                 <?php endif; ?>
 
 <div class="navigation text-center"><?php pagination_nav(); ?></div>
-<!--                    </div>-->
-				</div>
+
+			</div>
 		</main>
 
 	<?php get_footer(); ?>
