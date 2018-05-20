@@ -8,14 +8,17 @@
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 					<div <?php post_class('card'); ?>>
-					<div class="card-header">
-					<h2><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
+					<div class="card-img-top">
 					<!-- immagine in evidenza -->
 									<a href="<?php the_permalink(); ?> ">
 										<?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
 									</a>
 									</div>
+
 									<div class="card-body">
+										<div class="card-title">
+												<h2><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
+										</div>
 					<?php the_excerpt() ?>
 								 <a href="<?php the_permalink(); ?>"><span class="readmore">Continua a leggere &raquo;</span></a>
 										</div>
