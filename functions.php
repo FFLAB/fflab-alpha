@@ -78,8 +78,8 @@ function pagination_nav() {
 
     if ( $wp_query->max_num_pages > 1 ) { ?>
         <nav class="pagination" role="navigation">
-            <div class="nav-previous"><?php next_posts_link( '&larr; Articoli meno recenti' ); ?></div>
-            <div class="nav-next"><?php previous_posts_link( 'Articoli piu recenti &rarr;' ); ?></div>
+            <div class="nav-previous"><?php next_posts_link( '&larr; Articoli meno recenti ' ); ?></div>
+            <div class="nav-next"><?php previous_posts_link( ' Articoli piu recenti &rarr; ' ); ?></div>
         </nav>
 <?php }
 }
