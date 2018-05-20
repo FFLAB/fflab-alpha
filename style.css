@@ -304,9 +304,9 @@ font-size:14px;
 }
 /*effetto masonry*/
       /* con il CSS3 imito l'effetto del plugin Masonry*/
-     *, *:before, *:after 
+     *, *:before, *:after
         { box-sizing: border-box !important;}
-        
+
         .contenitore{
             -moz-column-width: 25em;
             -webkit-column-width: 25em;
@@ -319,4 +319,26 @@ font-size:14px;
             padding: 0;
             width: 98%;
         }
+				@media (min-width: 576px) {
+	    .card-columns {
+	        column-count: 2;
+	    }
+	}
 
+	@media (min-width: 768px) {
+	    .card-columns {
+	        column-count: 3;
+	    }
+	}
+
+	@media (min-width: 992px) {
+	    .card-columns {
+	        column-count: 3;
+	    }
+	}
+
+	@media (min-width: 1200px) {
+	    .card-columns {
+	        column-count: 3;
+	    }
+	}
