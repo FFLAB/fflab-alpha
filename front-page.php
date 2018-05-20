@@ -8,7 +8,7 @@
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 					<div <?php post_class('card'); ?>>
-				
+
 					<!-- immagine in evidenza -->
 									<a href="<?php the_permalink(); ?> ">
 										<?php the_post_thumbnail('full',array('class' => 'img-responsive card-img-top')); ?>
@@ -31,10 +31,10 @@
 											<p>Nessun elemento trovato</p>
 									</div>
 									<?php endif; ?>
-
+								</div>
 
 <div class="navigation text-center"><?php pagination_nav(); ?></div>
-                   </div>
+
 				</div>
 		</main>
 
