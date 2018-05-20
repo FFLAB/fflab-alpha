@@ -8,6 +8,7 @@
             <div class="card-body"><img src="foto/IMG_0002-1000.jpg" alt=""></div>
         </div>
 -->
+		<div class="card-columns">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 				<div <?php post_class('card'); ?>>
@@ -35,6 +36,7 @@
 <div class="navigation text-center"><?php pagination_nav(); ?></div>
 
 			</div>
+		</div>
 		</main>
 
 	<?php get_footer(); ?>
