@@ -331,7 +331,7 @@ font-size:14px;
 	    }
 	}
 
-	@media (min-width: 992px) {
+	@media (min-width: 1024px) {
 	    .card-columns {
 	        column-count: 2;
 	    }
