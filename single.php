@@ -21,8 +21,7 @@
                     ", ",
                     "</small>"
                     ); ?>
-                    <!-- visualizzo il numero dei commenti -->
-						<p><strong>Commenti:</strong> <span class="badge"><?php comments_number('0','1','%') ?></span></p>
+                    
 <!-- Carico il template dei commenti, se non è presente comments.php Wordpress carica un suo template predefinito-->
             <?php comments_template(); ?>
 
