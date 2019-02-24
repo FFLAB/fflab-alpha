@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<!--  template SINGLE-TEST.PHP -->
+<!--  template SINGLE.PHP -->
 		<main class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -22,13 +22,13 @@
                     "</small>"
                     ); ?>
                     
-<!-- Carico il template dei commenti, se non è presente comments.php Wordpress carica un suo template predefinito-->
+<!-- Comments template-->
             <?php comments_template(); ?>
 
 
 				</div>
 				<?php endwhile; else: ?>
-<!-- testo visualizzato solo se il loop non trova elementi-->
+<!-- message fallback-->
                 <div class="articolo">
                     <h2>Attenzione!</h2>
                     <p>Nessun elemento trovato</p>
