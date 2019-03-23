@@ -479,7 +479,3 @@ img {
         column-count: 3;
     }
 }
-
-.card:first-child {
-    width: 100%;
-}
