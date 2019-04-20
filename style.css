@@ -87,7 +87,7 @@ header h2 {
 .articolo {
     padding: 5px;
     background-color: white;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 #barra .interno {
@@ -130,9 +130,7 @@ header h2 {
 
 /* se l'articolo è in evidenza (sticky)*/
 
-.articolo.sticky {
-    border: 1px solid #a00e05;
-}
+.articolo.sticky {}
 
 
 /* mostro l'etichetta con il testo definito In Evidenza */
@@ -242,12 +240,12 @@ main p {
     color: #fff;
 }
 
-.navbar-light .navbar-nav>li>a {
+.navbar-light .navbar-nav > li > a {
     color: #fff;
 }
 
-.navbar-light .navbar-nav>li>a:hover,
-.navbar-light .navbar-nav>li>a:focus {
+.navbar-light .navbar-nav > li > a:hover,
+.navbar-light .navbar-nav > li > a:focus {
     background-color: #a00e05;
     color: #FFF;
 }
@@ -260,14 +258,14 @@ main p {
     color: white;
 }
 
-.navbar-light .navbar-nav>.active {
+.navbar-light .navbar-nav > .active {
     color: #FFF;
     background: #a00e05;
 }
 
-.navbar-light .navbar-nav>.active>a,
-.navbar-light .navbar-nav>.active>a:hover,
-.navbar-light .navbar-nav>.active>a:focus {
+.navbar-light .navbar-nav > .active > a,
+.navbar-light .navbar-nav > .active > a:hover,
+.navbar-light .navbar-nav > .active > a:focus {
     color: #FFF;
     background: #a00e05;
 }
