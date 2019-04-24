@@ -8,7 +8,7 @@
 
             <div <?php post_class('articolo'); ?>>
                 <h2><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
-                <!-- immagine in evidenza -->
+                <!-- thumbnail -->
                 <a href="<?php the_permalink(); ?> ">
                     <?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
                 </a>
