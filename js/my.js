@@ -15,7 +15,7 @@ $(document).ready(function() {
         },
     });
 
-    $(".gallery a").attr("rel", "galleria").fancybox({
+    $(".gallery a, .coblocks-gallery--figure ").attr("rel", "galleria").fancybox({
         padding: 0,
     });
 
