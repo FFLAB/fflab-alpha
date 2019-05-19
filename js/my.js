@@ -6,7 +6,7 @@ $(document).ready(function() {
     $("#switch").tooltip();
     $(".gallery-caption span").tooltip();
 
-    $(".gallery a, coblocks-gallery--figure a").fancybox({
+    $(".gallery a, .coblocks-gallery--figure a").fancybox({
         padding: 0,
         helpers: {
             title: {
