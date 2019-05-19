@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
     // codice di istruzioni per Fancybox*/
-   //ori $('.gallery a').attr('rel','gallAnimata').fancybox();
+    //ori $('.gallery a').attr('rel','gallAnimata').fancybox();
 
-	$("#switch").tooltip();
-  $(".gallery-caption span").tooltip();
+    $("#switch").tooltip();
+    $(".gallery-caption span").tooltip();
 
-    $(".gallery a").fancybox({
+    $(".gallery a, coblocks-gallery--figure a").fancybox({
         padding: 0,
         helpers: {
             title: {
@@ -21,4 +21,4 @@ $(document).ready(function() {
 
     $(".gallery-icon.portrait").removeClass("portrait").addClass("landscape");
 
-});//chiusura (document).ready
+}); //chiusura (document).ready
