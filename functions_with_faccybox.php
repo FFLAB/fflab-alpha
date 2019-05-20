@@ -128,8 +128,27 @@ if (!is_admin()) {
 function caricaScripts(){
 //new
  global $wp_scripts;
- 
+    //Dimentica la versione attualmente registrata di Jquery
+    wp_deregister_script("jquery");
 
+    // Definire la nostra versione
+    wp_register_script(
+        "jquery",
+        get_bloginfo("template_url") . "/js/jquery-3.3.1.min.js",
+        //"https://code.jquery.com/jquery-3.2.1.min.js",
+        false,
+        "3.3.1",
+        true
+);
+    // Definisco JS e CSS di Fancybox
+        wp_register_script(
+            "fancyJS",
+            // get_bloginfo("template_url") . "/fancybox/jquery.fancybox.pack.js",
+            get_bloginfo("template_url") . "/js/jquery.fancybox.min.js",
+            array("jquery"),
+            "3.2.0",
+            true
+        );
 
 
 
@@ -138,7 +157,7 @@ function caricaScripts(){
             "myjs",
             // get_bloginfo("template_url") . "/js/my.js",
             get_bloginfo("template_url") . "/js/myscript.js",
-            array("jquery","popperJS","bootstrapJS"),
+            array("jquery","fancyJS","popperJS","bootstrapJS"),
             "1.0.0",
             true
         );
@@ -162,6 +181,8 @@ function caricaScripts(){
 // Caricamenti scripts (attenzione qui non importa l'ordine, le dipendenze sono indicate negli array() precedenti
 
     wp_enqueue_script("myjs");
+    wp_enqueue_script("jquery");
+    wp_enqueue_script("fancyJS");
     wp_enqueue_script("popperJS");
     wp_enqueue_script("bootstrapJS");
 
