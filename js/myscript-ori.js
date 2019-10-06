@@ -3,8 +3,7 @@ $(document).ready(function(){
     //codice per fancybox3
 
     $("#switch").tooltip();
-    // $(".gallery-caption span").tooltip();
-    $("figcaption").tooltip();
+    $(".gallery-caption span").tooltip();
 
       $(".gallery a").fancybox({
           padding: 0,
